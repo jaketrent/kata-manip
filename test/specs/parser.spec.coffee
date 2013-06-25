@@ -24,3 +24,9 @@ describe 'Parser', ->
     days.length.should.eql 1
     days[0].getMin().should.eql 50
     days[0].getMax().should.eql 99
+
+  it 'returns a multiple days for multiple lines', ->
+    days = parser.parse(['1    99  50', '2    101 30'])
+    days.length.should.eql 2
+    days[1].getMin().should.eql 30
+    days[1].getMax().should.eql 101
