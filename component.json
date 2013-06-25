@@ -1,0 +1,9 @@
+{
+  "name": "kata-manip",
+  "version": "0.0.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "app/static/js/components"
+  ]
+}
