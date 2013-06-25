@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node_modules/supervisor/lib/cli-wrapper.js --extensions 'node|js|coffee' --ignore app/static/ app/app.coffee"
+    "start": "node_modules/supervisor/lib/cli-wrapper.js --extensions 'node|js|coffee' --ignore app/static/ app/app.coffee",
+    "test": "node_modules/mocha/bin/mocha test/specs/**/*.spec.coffee --watch"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,8 @@
     "mincer": "~0.4.6"
   },
   "devDependencies": {
-    "supervisor": "~0.5.2"
+    "supervisor": "~0.5.2",
+    "mocha": "~1.11.0",
+    "chai": "~1.7.1"
   }
 }
