@@ -1,17 +1,11 @@
-class Day
-  constructor: (@num, @min, @max) ->
-
-  getMin: ->
-    parseInt @min, 10
-  getMax: ->
-    parseInt @max, 10
+Day = require './day'
 
 isDayLine = (line) ->
   line.trim().match /^\d+/
 
 createDay = (line) ->
   parts = line.split /\s+/
-  new Day parts[0], parts[2], parts[1]
+  new Day parts[1], parts[3], parts[2]
 
 exports.parse = (lines) ->
   days = []
