@@ -1,11 +1,11 @@
 Day = require './day'
 
 isDayLine = (line) ->
-  line.trim().match /^\d+/
+  line.match /^\s*\d+/
 
 createDay = (line) ->
-  parts = line.split /\s+/
-  new Day parts[1], parts[3], parts[2]
+  parts = line.trim().split /\s+/
+  new Day parts[0], parts[2], parts[1]
 
 exports.parse = (lines) ->
   days = []
